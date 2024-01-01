@@ -43,8 +43,9 @@ public class Operacion extends HttpServlet {
 
         Properties prop = new Properties();
         prop.load(new FileInputStream(uri.getFile()));
+        int fuente = Integer.parseInt(prop.getProperty("fuente"));
 
-        DAOFactory daof = DAOFactory.getDAOFactory(Integer.parseInt(prop.getProperty("fuente")));
+        DAOFactory daof = DAOFactory.getDAOFactory(fuente);
         request.setAttribute("fuente", prop.getProperty("fuente"));
         IAvistamientosDAO adao = daof.getAvistamientosDAO();
         List<Avistamiento> listado = null;

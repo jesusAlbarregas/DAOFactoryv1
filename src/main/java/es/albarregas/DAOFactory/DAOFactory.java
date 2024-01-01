@@ -14,10 +14,10 @@ public abstract class DAOFactory {
         DAOFactory daof = null;
         
         switch(tipo){
-            case 1:
+            case MYSQL:
                 daof = new MySQLDAOFactory();
                 break;
-            case 2:
+            case DERBY:
                 daof = new DerbyDAOFactory();
                 break;
         }
