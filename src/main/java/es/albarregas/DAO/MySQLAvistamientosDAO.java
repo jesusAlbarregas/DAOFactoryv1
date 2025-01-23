@@ -50,7 +50,7 @@ public class MySQLAvistamientosDAO implements IAvistamientosDAO {
                 avistamiento.setFecha(resultado.getString("fecha"));
                 listado.add(avistamiento);
             }
-//            conexion = null;
+
         } catch (SQLException e) {
             e.printStackTrace();
 

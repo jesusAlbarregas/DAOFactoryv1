@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <%
-            String motor = (request.getAttribute("fuente").equals("1")) ? "MySQL" : "Derby";
+            String motor = (request.getSession().getAttribute("fuente").equals("1")) ? "MySQL" : "Derby";
         %>
         <title><%= motor%></title>
     </head>
